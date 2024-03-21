@@ -25,9 +25,3 @@ function sortNumbers(array: Array<number>): Array<number> {
 
   return array;
 }
-
-{
-  {
-    console.log(sortNumbers([0, 1, 2, 1, 2, 0]));
-  }
-}
