@@ -6,18 +6,22 @@ function sortNumbers(array: Array<number>): Array<number> {
 
   while (current <= end) {
     if (array[current] === 0) {
-      temp = array[start];
-      array[start] = array[current];
-      array[current] = temp;
+      if (array[start] !== 0) {
+        temp = array[start];
+        array[start] = array[current];
+        array[current] = temp;
+      }
 
       start++;
       current++;
     } else if (array[current] === 1) {
       current++;
     } else {
-      temp = array[end];
-      array[end] = array[current];
-      array[current] = temp;
+      if (array[end] !== 2) {
+        temp = array[end];
+        array[end] = array[current];
+        array[current] = temp;
+      }
 
       end--;
     }
