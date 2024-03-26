@@ -1,14 +1,21 @@
-export function findSumOfThree(array: Array<number>, target: number): boolean {
-  const sortedArray = array.sort();
-  let isTripleFound = false;
+export function sumOfThree(array: Array<number>, target: number): boolean {
+  const copiedArray = array.slice(0);
+  const sortedArray = copiedArray.sort();
 
-  for (let i = 0; i < sortedArray.length; i++) {
-    for (let j = i + 1, k = i + 2; k < sortedArray.length; j++, k++) {
-      if (sortedArray[i] + sortedArray[j] + sortedArray[k] === target) {
-        isTripleFound = true;
+  for (let i = 0; i < sortedArray.length - 2; i++) {
+    let low = i + 1;
+    let high = sortedArray.length - 1;
+
+    while (low < high) {
+      if (sortedArray[i] + sortedArray[low] + sortedArray[high] === target) {
+        return true;
+      } else if (sortedArray[i] + sortedArray[low] + sortedArray[high] < target) {
+        low++;
+      } else {
+        high--;
       }
     }
   }
 
-  return isTripleFound;
+  return false;
 }
