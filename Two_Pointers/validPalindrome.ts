@@ -1,7 +1,7 @@
-function isPalindrome(s: string): boolean {
-  const lowercaseString = s.toLowerCase();
+function isPalindrome(str: string): boolean {
+  const lowercaseString = str.toLowerCase();
   let start = 0;
-  let end = s.length - 1;
+  let end = str.length - 1;
 
   while (start <= end) {
     if (lowercaseString[start] !== lowercaseString[end]) {
