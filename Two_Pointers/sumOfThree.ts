@@ -19,3 +19,5 @@ export function sumOfThree(array: Array<number>, target: number): boolean {
 
   return false;
 }
+
+export default sumOfThree;

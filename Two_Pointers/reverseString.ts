@@ -50,3 +50,5 @@ function removeSpace(str: string, end: number): string {
 
   return splittedString.join('');
 }
+
+export default reverseWords

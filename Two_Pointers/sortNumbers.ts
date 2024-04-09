@@ -29,3 +29,5 @@ function sortNumbers(array: Array<number>): Array<number> {
 
   return array;
 }
+
+export default sortNumbers;
