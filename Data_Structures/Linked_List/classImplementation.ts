@@ -118,6 +118,21 @@ class LinkedList<K extends number, T = string> implements IList<T> {
     this.size = 0;
   }
 
+  reverseList() {
+    let currentHead = this.head;
+    let previousHead = null;
+
+    while (currentHead) {
+      let nextHead = currentHead?.next;
+
+      currentHead.next = previousHead;
+      previousHead = currentHead;
+      currentHead = nextHead;
+    }
+
+    this.head = previousHead;
+  }
+
   printData() {
     let currentHead = this.head;
 
