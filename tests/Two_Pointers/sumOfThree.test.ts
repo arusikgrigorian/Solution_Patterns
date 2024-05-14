@@ -1,4 +1,4 @@
-import sumOfThree from '../Two_Pointers/sumOfThree';
+import sumOfThree from '../../Algorithms/Two_Pointers/sumOfThree';
 
 type Item = {
   label: string;

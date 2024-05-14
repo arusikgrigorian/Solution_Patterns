@@ -1,4 +1,4 @@
-import isPalindrome from '../Two_Pointers/validPalindrome';
+import isPalindrome from '../../Algorithms/Two_Pointers/validPalindrome';
 
 type Item = {
   label: string;

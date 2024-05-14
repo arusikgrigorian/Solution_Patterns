@@ -1,4 +1,4 @@
-import reverseWords from '../Two_Pointers/reverseString';
+import reverseWords from '../../Algorithms/Two_Pointers/reverseString';
 
 type Item = {
   label: string;

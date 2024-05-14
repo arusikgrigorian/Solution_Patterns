@@ -1,4 +1,4 @@
-import sortNumbers from '../Two_Pointers/sortNumbers';
+import sortNumbers from '../../Algorithms/Two_Pointers/sortNumbers';
 
 type Item = {
   label: string;
