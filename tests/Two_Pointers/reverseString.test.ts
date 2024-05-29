@@ -6,7 +6,7 @@ type Item = {
   result: string;
 };
 
-const sentences: Array<Item> = [
+const list: Array<Item> = [
   { label: 'hello world -> world hello', sentence: 'hello world', result: 'world hello' },
   { label: '" blue sky above " -> above sky blue', sentence: ' blue sky above ', result: 'above sky blue' },
   { label: '"Birds   chirping  " -> chirping Birds', sentence: 'Birds   chirping  ', result: 'chirping Birds' },
@@ -17,7 +17,7 @@ const sentences: Array<Item> = [
   },
 ];
 
-sentences.forEach(({ label, sentence, result }) => {
+list.forEach(({ label, sentence, result }) => {
   test(label, () => {
     expect(reverseWords(sentence)).toBe(result);
   });
