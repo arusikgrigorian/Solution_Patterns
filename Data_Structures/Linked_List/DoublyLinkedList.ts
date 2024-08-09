@@ -133,17 +133,21 @@ class DoublyLinkedList implements IDoublyLinkedList {
   }
 
   reverseList() {
-    let currentNode = this.head;
-    let previous = null;
+    if (!this.head || !this.head.next) {
+      return this.head;
+    } else {
+      let currentNode: null | IDoublyLinkedNode = this.head;
+      let previous = null;
 
-    while (currentNode) {
-      previous = currentNode.previous;
-      currentNode.previous = currentNode.next;
-      currentNode.next = previous;
-      currentNode = currentNode.previous;
+      while (currentNode) {
+        previous = currentNode.previous;
+        currentNode.previous = currentNode.next;
+        currentNode.next = previous;
+        currentNode = currentNode.previous;
+      }
+
+      this.head = previous && previous.previous;
     }
-
-    this.head = previous && previous.previous;
   }
 
   printData() {
